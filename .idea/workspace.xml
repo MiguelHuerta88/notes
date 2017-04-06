@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fb9e73b4-6585-44b6-8e70-b358f924708a" name="Default" comment="" />
+    <list default="true" id="fb9e73b4-6585-44b6-8e70-b358f924708a" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.vagrant/machines/notes/virtualbox/action_provision" afterPath="$PROJECT_DIR$/.vagrant/machines/notes/virtualbox/action_provision" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.vagrant/machines/notes/virtualbox/action_set_name" afterPath="$PROJECT_DIR$/.vagrant/machines/notes/virtualbox/action_set_name" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.vagrant/machines/notes/virtualbox/id" afterPath="$PROJECT_DIR$/.vagrant/machines/notes/virtualbox/id" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.vagrant/machines/notes/virtualbox/index_uuid" afterPath="$PROJECT_DIR$/.vagrant/machines/notes/virtualbox/index_uuid" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.vagrant/machines/notes/virtualbox/private_key" afterPath="$PROJECT_DIR$/.vagrant/machines/notes/virtualbox/private_key" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/NotesController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/NotesController.php" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,11 +22,11 @@
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf>
-          <file leaf-file-name="NotesController.php" pinned="false" current-in-tab="false">
+          <file leaf-file-name="NotesController.php" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/Http/Controllers/NotesController.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="165">
-                  <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+                <state relative-caret-position="262">
+                  <caret line="134" column="45" lean-forward="true" selection-start-line="134" selection-start-column="45" selection-end-line="134" selection-end-column="45" />
                   <folding>
                     <element signature="e#128#148#0#PHP" expanded="true" />
                   </folding>
@@ -46,7 +54,7 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="routes.php" pinned="false" current-in-tab="true">
+          <file leaf-file-name="routes.php" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="300">
@@ -128,10 +136,10 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="AuthController.php" pinned="false" current-in-tab="false">
+          <file leaf-file-name="AuthController.php" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/AuthController.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="559">
+                <state relative-caret-position="532">
                   <caret line="100" column="101" lean-forward="false" selection-start-line="100" selection-start-column="101" selection-end-line="100" selection-end-column="101" />
                   <folding>
                     <element signature="e#45#65#0#PHP" expanded="true" />
@@ -140,7 +148,7 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="Authenticate.php" pinned="false" current-in-tab="true">
+          <file leaf-file-name="Authenticate.php" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/Http/Middleware/Authenticate.php">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="330">
@@ -175,9 +183,9 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/Auth/AuthController.php" />
         <option value="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" />
         <option value="$PROJECT_DIR$/app/Http/Kernel.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/NotesController.php" />
         <option value="$PROJECT_DIR$/app/Http/routes.php" />
         <option value="$PROJECT_DIR$/app/Http/Middleware/Owner.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/NotesController.php" />
       </list>
     </option>
   </component>
@@ -558,12 +566,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1491505207730</updated>
-      <workItem from="1491505208994" duration="8142000" />
+      <workItem from="1491505208994" duration="9110000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8142000" />
+    <option name="totallyTimeSpent" value="9110000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="20" y="43" width="1400" height="785" extended-state="0" />
@@ -688,16 +696,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/AuthController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="559">
-          <caret line="100" column="101" lean-forward="false" selection-start-line="100" selection-start-column="101" selection-end-line="100" selection-end-column="101" />
-          <folding>
-            <element signature="e#45#65#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
@@ -754,21 +752,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/NotesController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding>
-            <element signature="e#128#148#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="29" column="29" lean-forward="true" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="29" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/AuthController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="532">
+          <caret line="100" column="101" lean-forward="false" selection-start-line="100" selection-start-column="101" selection-end-line="100" selection-end-column="101" />
+          <folding>
+            <element signature="e#45#65#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/NotesController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="262">
+          <caret line="134" column="45" lean-forward="true" selection-start-line="134" selection-start-column="45" selection-end-line="134" selection-end-column="45" />
+          <folding>
+            <element signature="e#128#148#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

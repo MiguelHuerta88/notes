@@ -36,8 +36,8 @@ class NotesController extends Controller
      */
     public function index()
     {
-        // we show all our notes
-        $notes = $this->note->all();
+        // we show all our notes. with user_id matching
+        $notes = $this->note->where('user_id', Auth::id())->get();
 
         // return a json response
         //return view('notes.index')->with('notes', $notes);
@@ -72,7 +72,12 @@ class NotesController extends Controller
         }
 
         // store
-        $this->note->insert(request()->only('user_id', 'title', 'note'));
+        //$this->note->insert(request()->only('user_id', 'title', 'note'));
+        $note = $this->note;
+        $note->title = request()->get('title');
+        $note->note = request()->get('note');
+        $note->user_id = request()->get('user_id');
+        $note->save();
 
         return response()->json(['message' => 'Note created.']);
     }
@@ -119,13 +124,17 @@ class NotesController extends Controller
         }
 
         // else update
-        $this->note->update(
+        /*$this->note->update(
             [
                 'title' => request()->get('title'),
                 'user_id' => request()->get('user_id'),
                 'note' => request()->get('note')
             ]
-        );
+        );*/
+        $note->title = request()->get('title');
+        $note->note = request()->get('note');
+        $note->user_id = request()->get('user_id');
+        $note->save();
 
         // return response
         return response()->json(['mesage' => 'Note was successfully updated.']);
