@@ -17,7 +17,7 @@
     <div class="alert alert-danger">
         <strong>Fix any validation errors before continuing</strong>
         @foreach($errors->all() as $error)
-            <p>{{$errro}}</p>
+            <p>{{$error}}</p>
         @endforeach
     </div>
     @endif
@@ -27,6 +27,8 @@
         <form action="{{route('notes.store')}}" method="POST">
             {{csrf_field()}}
 
+            {{-- user id that will be hidden --}}
+            <input type="hidden" name="user_id" value="{{$userId}}" />
             <div class="form-group {{$errors->has('title') ? 'has-error' : ''}}">
                 <label for="title">Title:</label>
                 <input class="form-control" type="input" name="title" maxlength="50" value="{{old('title')}}">

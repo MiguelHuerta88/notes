@@ -9,7 +9,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Note;
-
+use Auth;
+use Validator;
 
 class NotesController extends Controller
 {
@@ -39,9 +40,9 @@ class NotesController extends Controller
         $notes = $this->note->all();
 
         // return a json response
-        return view('notes.index')->with('notes', $notes);
+        //return view('notes.index')->with('notes', $notes);
 
-        //return response()->json(['notes' => $notes]);
+        return response()->json(['notes' => $notes]);
     }
 
     /**
@@ -50,8 +51,10 @@ class NotesController extends Controller
      */
     public function create()
     {
+        // pull the user id
+        $userId = Auth::id();
         // send them to the view with the form
-        return view('notes.create');
+        return view('notes.create')->with('userId', $userId);
     }
 
     /**
@@ -62,11 +65,83 @@ class NotesController extends Controller
     public function store()
     {
         // validate
+        $validator = Validator::make(request()->all(), $this->note->rules);
+
+        if($validator->fails()) {
+            return response()->json(['message' => 'we have a problem validating', 'errors' => $validator->errors()]);
+        }
 
         // store
+        $this->note->insert(request()->only('user_id', 'title', 'note'));
 
-        // return home
+        return response()->json(['message' => 'Note created.']);
+    }
+
+    /**
+     * @param $id
+     * @return \Illuminate\Http\JsonResponse
+     */
+    public function show($id)
+    {
+        // pull the matching record
+        $note = $this->note->find($id);
+
+        return response()->json(['note' => $note]);
     }
 
 
+    public function edit($id)
+    {
+        $note = $this->note->find($id);
+
+        if(!$note) {
+            request()->session()->flash('message', 'No note Found');
+            return redirect()->route('notes.index');
+        }
+
+        return view('notes.edit')->with('note', $note);
+    }
+
+    public function update($id)
+    {
+        // pull the note
+        $note = $this->note->find($id);
+
+        if(!$note) {
+            return response()->json(['message' => 'We could not find a matching note with this id']);
+        }
+
+        // validate
+        $validator = Validator::make(request()->all(), $this->note->rules);
+
+        if($validator->fails()) {
+            return response()->json(['message' => 'we have a problem validating', 'errors' => $validator->errors()]);
+        }
+
+        // else update
+        $this->note->update(
+            [
+                'title' => request()->get('title'),
+                'user_id' => request()->get('user_id'),
+                'note' => request()->get('note')
+            ]
+        );
+
+        // return response
+        return response()->json(['mesage' => 'Note was successfully updated.']);
+    }
+
+    public function delete($id)
+    {
+        $note = $this->note->find($id);
+
+        if(!$note) {
+            return response()->json(['message' => 'We could not find a matching note record. No deletion was completed']);
+        }
+
+        // else delete
+        $note->delete();
+
+        return response()->json(['mesage' => 'Note with id: ' . $id . " was deleted"]);
+    }
 }

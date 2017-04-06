@@ -30,7 +30,7 @@ class Note extends Model
      * Rules for our model when we are validating
      * @var array
      */
-    protected $rules = [
+    public $rules = [
         'user_id' => 'required|numeric',
         'title' => 'required|max:50',
         'note' => 'required|max:1000'
