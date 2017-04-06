@@ -1,0 +1,1 @@
+{"virtualbox":{"/home/vagrant/notes":{"type":null,"mount_options":[],"guestpath":"/home/vagrant/notes","hostpath":"/Users/MiguelHuerta/Desktop/code/notes","disabled":false,"__vagrantfile":true},"/vagrant":{"guestpath":"/vagrant","hostpath":"/Users/MiguelHuerta/Desktop/code/notes","disabled":false,"__vagrantfile":true}}}
